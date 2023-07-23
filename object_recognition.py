@@ -12,7 +12,7 @@ def main():
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
 
     # Especifica o modelo YOLO a ser usado.
-    model = YOLO("train_v1.4.pt")
+    model = YOLO("model/train_v1.4.pt")
 
     # Cria um dicionário de nomes de classes.
     class_names = {
@@ -37,7 +37,7 @@ def main():
     while True:
         ret, frame = cap.read()
         # Corta o quadro para a região de interesse.
-        frame = frame[roi[1]:roi[3], roi[0]:roi[2]]
+        # frame = frame[roi[1]:roi[3], roi[0]:roi[2]]
         # Executa o modelo YOLO no quadro.
         result = model(frame, agnostic_nms=True)[0]
         # Extrai as detecções da saída YOLO.
