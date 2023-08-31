@@ -119,15 +119,19 @@ class AngleHandDetector:
         return tip.y < base.y
 
     @staticmethod
-    def calculate_angle(landmark1, landmark2):
+    def calculate_angle_yz(landmark1, landmark2):
         # Converte as coordenadas normalizadas para coordenadas na imagem
-        x1, y1 = landmark1.x, landmark1.y
-        x2, y2 = landmark2.x, landmark2.y
+        x1, y1, z1 = landmark1.x, landmark1.y, landmark1.z
+        x2, y2, z2 = landmark2.x, landmark2.y, landmark2.z
 
-        # Calcular o ângulo entre os dois pontos
-        angle_rad = math.atan2(y2 - y1, x2 - x1)
-        angle_deg = math.degrees(angle_rad)
-        return angle_deg
+        # Calcular o ângulo entre os dois pontos em relação ao eixo y e z
+        angle_y_rad = math.atan2(z2 - z1, y2 - y1)
+        angle_z_rad = math.atan2(y2 - y1, x2 - x1)
+
+        angle_y_deg = math.degrees(angle_y_rad)
+        angle_z_deg = math.degrees(angle_z_rad)
+
+        return angle_y_deg, angle_z_deg
 
     def parar_camera(self):
         if self.cap is not None:
