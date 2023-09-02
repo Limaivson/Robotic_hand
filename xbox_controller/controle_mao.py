@@ -66,6 +66,7 @@ while running:
                 print("Dedos abertos")
             elif event.button == BUTTON_B:
                 finger_positions = [0, 0, 0, 0, 0, 0]
+
                 set_finger_positions(finger_positions)
                 print("Dedos fechados")
             elif event.button == BUTTON_LB and current_mode == "individual":
