@@ -2,7 +2,7 @@
 
 # Projeto de Controle de Mão Robótica
 
-<img src="https://github.com/Limaivson/Robotic_hand/blob/main/ezgif.com-video-to-gif%20(7).gif" width="200" height="350">
+<img src="https://github.com/Limaivson/Robotic_hand/blob/main/open_hand.jpeg" width="200" height="350"> <img src="https://github.com/Limaivson/Robotic_hand/blob/main/ezgif.com-video-to-gif%20(7).gif" width="200" height="350">
 
 ## Visão Geral
 
