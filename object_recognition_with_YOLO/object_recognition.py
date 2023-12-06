@@ -5,8 +5,8 @@ from ultralytics import YOLO
 
 def main():
     # define resolution
-    # cap = cv2.VideoCapture('rtsp://192.168.0.177:8080/h264_pcm.sdp')
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture('rtsp://192.168.158.104:8080/h264_pcm.sdp')
+    # cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
 
@@ -30,7 +30,7 @@ def main():
     )
 
     # Define a região de interesse.
-    roi = (100, 100, 300, 300)
+    # roi = (100, 100, 300, 300)
 
     # Inicie um loop para ler quadros do fluxo de vídeo.
     while True:
